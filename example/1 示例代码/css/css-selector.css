@@ -1,0 +1,84 @@
+/* 左侧面板样式 */
+.left-panel {
+  width: 25%;
+  float: left;
+  background-color: #f2f2f2;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.left-panel h2 {
+  color: #333;
+}
+
+.left-panel ul {
+  list-style: none;
+  padding: 0;
+}
+
+.left-panel .selector {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+/* 右侧面板样式 */
+.right-panel {
+  width: 25%;
+  float: left;
+  background-color: #eaeaea;
+  padding: 20px;
+  box-sizing: border-box;
+  white-space: pre-wrap;
+}
+
+.right-panel h2 {
+  color: #333;
+}
+
+/* 中间面板样式 */
+.center-panel {
+  width: 25%;
+  float: left;
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  white-space: pre-wrap;
+}
+
+.center-panel h2 {
+  color: #333;
+}
+
+/* 结果面板样式 */
+.result-panel {
+  width: 25%;
+  float: left;
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.result-panel h2 {
+  color: #333;
+}
+
+/* 选择器类型样式 */
+#selector-type {
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  color: #333;
+}
+
+/* CSS代码样式 */
+#css-code {
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  color: #333;
+}
+
+/* 结果示例样式 */
+#result-example {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}

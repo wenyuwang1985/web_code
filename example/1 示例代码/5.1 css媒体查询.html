@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>css媒体查询</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <style>
+    /* 默认样式 */
+    body {
+      background-color: white;
+      color: black;
+      font-size: 16px;
+    }
+
+    /* 根据屏幕宽度调整样式 */
+    /* 当屏幕宽度小于或等于600像素时应用的样式 */
+    @media (max-width: 600px) {
+      body {
+        background-color: lightblue;
+        color:blueviolet;
+        font-size: 14px;
+      }
+    }
+
+    /* 当屏幕宽度介于601像素和1024像素之间时应用的样式 */
+    @media (min-width: 601px) and (max-width: 1024px) {
+      body {
+        background-color: lightgray;
+        color:cadetblue;
+        font-size: 16px;
+      }
+    }
+
+   /* 在屏幕宽度大于或等于1024像素时应用的样式 */
+    @media only screen and (min-width: 1024px) {
+
+      body {
+        background-color: lightgreen;
+        font-size: 18px;
+        color: coral;
+      }
+      button {
+        background-color: lightgray;
+        color: red;
+        width:100px;
+        height: 30px;
+      }
+    }
+
+    /* 根据设备方向应用不同的样式 */
+    /* 当屏幕处于纵向模式时应用的样式 */
+    @media (orientation: portrait) {
+      body {
+        background-color: lightpink;
+        color:blue;
+        font-size:18px;
+      }
+    }
+
+    /* 当屏幕处于横向模式时应用的样式 */
+    @media (orientation: landscape) {
+      body {
+        background-color: lightyellow;
+      }
+    }
+
+    /* 根据设备类型调整样式 */
+    /* 当设备是触摸屏时应用的样式 */
+    @media (pointer: coarse) {
+      body {
+        background-color:aquamarine;
+        color:black;
+      }
+      button {
+        background-color: lightblue;
+        color: white;
+      }
+    }
+    /* 当设备是鼠标时应用的样式 */
+    @media (pointer: fine) {
+      button {
+        background-color: lightgray;
+        color: black;
+        width:100px;
+        height: 30px;
+      }
+    }
+  </style>
+  
+</head>
+<body>
+  <h1>媒体查询示例</h1>
+  <p>这是一个示例文本。</p>
+  <p>
+    在这个示例中，我们定义了以下样式规则：<br>
+1. 默认样式：适用于大多数设备，即白色背景、黑色文字、16像素字体大小。<br>
+2. 根据屏幕宽度调整样式：使用媒体查询(max-width: 600px)，当屏幕宽度小于或等于600像素时，将背景颜色设置为浅蓝色、字体大小设置为14像素。<br>
+3. 根据设备方向应用不同的样式：使用媒体查询(orientation: portrait)和(orientation: landscape)，分别为纵向模式和横向模式设置不同的背景颜色。<br>
+4. 根据设备类型调整样式：使用媒体查询(pointer: coarse)和(pointer: fine)，分别为粗糙指针（如触摸屏）和精细指针（如鼠标）设置不同的按钮样式。<br>
+5.通过运行上述代码并在不同的设备、屏幕宽度和方向下查看页面，您将看到样式根据不同的媒体查询条件进行相应调整。<br>
+  </p>
+  <button>按钮</button>
+
+</body>
+</html>

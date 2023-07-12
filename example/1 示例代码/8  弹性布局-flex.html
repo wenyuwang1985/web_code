@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>弹性布局</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <style>
+    .flex-container {
+      display: flex;
+      }
+      /* 以下为辅助样式 */
+      .flex-container{ 
+      background-color: #F0f0f0; 
+      }
+      .flex-container .flex-item{
+      padding:20px;
+      background-color: #B1FF84; 
+      }
+      .flex-container .flex-item:first-child{ 
+      background-color: #F5DE25; 
+      }
+      .flex-container .flex-item:last-child{ 
+      background-color: #90D9F7; 
+      }
+
+      /* 使 flex 项以相反的顺序排列
+      flex-direction: column-reverse; */
+      .flex-container2 {display: flex;flex-direction: column;}
+      .flex-container2 {
+      display: flex;
+      flex-direction: column;
+      }
+      /* 以下为辅助样式 */
+      .flex-container2{ 
+      background-color: #F0f0f0; 
+      }
+      .flex-container2 .flex-item{
+      padding:20px;
+      background-color: #B1FF84; 
+      }
+      .flex-container2 .flex-item:first-child{ 
+      background-color: #F5DE25; 
+      }
+      .flex-container2 .flex-item:last-child{ 
+      background-color: #90D9F7; 
+}
+
+  /* 靠右对齐的 flex 项 */
+    .flex-container3 {display: flex;justify-content: flex-end;}
+    .flex-container3 {
+      display: flex;
+      justify-content: flex-end;
+      }
+      /* 以下为辅助样式 */
+      .flex-container3{ 
+      background-color: #F0f0f0; 
+      }
+      .flex-container3 .flex-item{
+      padding:20px;
+      background-color: #B1FF84; 
+      }
+      .flex-container3 .flex-item:first-child{ 
+      background-color: #F5DE25; 
+      }
+      .flex-container3 .flex-item:last-child{ 
+      background-color: #90D9F7; 
+      }
+
+
+      .flex-container4 {display: flex;justify-content: center;}
+      .flex-container4 {
+        display: flex;
+        justify-content: center;
+        }
+        /* 以下为辅助样式 */
+        .flex-container4{ 
+        background-color: #F0f0f0; 
+        }
+        .flex-container4 .flex-item{
+        padding:20px;
+        background-color: #B1FF84; 
+        }
+        .flex-container4 .flex-item:first-child{ 
+        background-color: #F5DE25; 
+        }
+        .flex-container4 .flex-item:last-child{ 
+        background-color: #90D9F7; 
+        }
+
+
+    .flex-container5 {
+      display: flex; /* 将容器设置为弹性布局 */
+      justify-content: center; /* 水平居中对齐弹性项 */
+      align-items: center; /* 垂直居中对齐弹性项 */
+      flex-direction: row; /* 设置主轴方向为水平 */
+      flex-wrap: wrap; /* 允许弹性项换行 */
+    }
+    .flex-container5 .flex-item {
+      flex: 1 1 200px; /* 设置弹性项的伸缩比例，初始大小和最大大小 */
+      margin: 10px; /* 设置弹性项之间的间距 */
+    }
+  </style>
+</head>
+<body>
+  <h1>1 创建一个 flex 容器</h1>
+  <div class="flex-container">  
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+  </div>
+
+  <h1>2 将 flex 项排成一列-垂直布局</h1>
+  <div class="flex-container2">  
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    </div> 
+
+    
+  <h1>3 靠右对齐的 flex 项</h1>
+  <div class="flex-container3">  
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    </div>
+
+    <h1>3  居中对齐的 flex 项</h1>
+    <div class="flex-container4">  
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+    </div>
+
+   
+
+    <h1>4  flex基础布局</h1>
+  <div class="flex-container5">
+    <div class="flex-item" style="background-color: red;">Item 1</div>
+    <div class="flex-item" style="background-color: blue;">Item 2</div>
+    <div class="flex-item" style="background-color: green;">Item 3</div>
+    <div class="flex-item" style="background-color: yellow;">Item 4</div>
+  </div>
+</body>
+
+</body>
+</html>

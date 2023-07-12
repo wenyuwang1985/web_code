@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- 
+    1. 在移动设备上，默认的视口宽度比较小，会将网页缩放以适应屏幕宽度，会导致网页在移动设备上显示不正常。
+    2. width=device-width 指定视口的宽度应该与设备的宽度保持一致，这样网页内容将根据设备屏幕的宽度进行布局。
+    3. initial-scale=1.0 设置初始的缩放比例为1.0，确保页面以原始比例显示，不进行缩放。
+    4. maximum-scale=1.0 设置最大的缩放比例为1.0，阻止用户进行放大缩小操作。无法通过手势放大网页内容，只能以原始比例或缩小的方式进行浏览。
+    5. user-scalable=no 禁止了用户对页面进行手动缩放,确保网页布局的稳定性和一致性，防止用户意外改变页面的比例。
+   -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- 设置浏览器兼容性的meta标签。告诉浏览器使用最新的可用渲染引擎来渲染页面。 -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>一套兼容PC端+移动端的HTML模板</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* CSS重置样式 */
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed,
+    figure, figcaption, footer, header, hgroup,
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+    /* HTML5元素样式重置 */
+    article, aside, details, figcaption, figure,
+    footer, header, hgroup, menu, nav, section {
+      display: block;
+    }
+    /* 块级元素设置为不换行 */
+    body, button, input, select, textarea {
+      font-size: 12px;
+      line-height: 1.5;
+      white-space: nowrap;
+    }
+    /* 链接样式 */
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+    /* 移动端特定样式 */
+    @media only screen and (max-width: 600px) {
+      /* 在小屏幕下的样式调整 */
+    }
+  </style>
+</head>
+<body>
+  <!-- 页面内容 -->
+  <header>
+    <!-- Header content goes here -->
+    </header>
+    <main>
+        <!-- Main content goes here -->
+    </main>
+    <footer>
+        <!-- Footer content goes here -->
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>

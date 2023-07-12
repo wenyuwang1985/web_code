@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>栅格布局</title>
+  <style>
+/*
+1.使用了一个带有 .container 类的容器元素，用于包裹栅格布局。在其中放置了两个带有 .row 类的行元素，每一行包含了不同数量的列元素。列元素使用了 .col-* 的类来指定列宽度，其中的 * 为 1 至 12 的数字，表示列所占用的栅格数。
+
+2.在 CSS 部分中使用了 Flexbox 布局，通过 display: flex 和 flex-wrap: wrap 实现行元素的自动换行。在列元素中使用了 flex: 0 0 * 属性来指定元素的宽度和不可缩放性，使用 max-width 属性来设置元素最大宽度，使用 padding 属性来设置元素的内边距。
+
+3.在 CSS 中使用媒体查询来实现栅格布局的响应式设计，例如在小屏幕设备上使用更少的栅格数或更小的列宽度。
+*/
+ .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.col-4 {
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%;
+  padding: 0 15px;
+  background: red;
+  border:1px solid #000;
+}
+
+.col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0 15px;
+  border:1px solid orange;
+}
+
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-6">Column 1-col-6</div>
+    <div class="col-6">Column 2-col-6</div>
+  </div>
+  <div class="row">
+    <div class="col-4">Column 1-col-4</div>
+    <div class="col-4">Column 2-col-4</div>
+    <div class="col-4">Column 3-col-4</div>
+  </div>
+</div>
+
+
+</body>
+</html>

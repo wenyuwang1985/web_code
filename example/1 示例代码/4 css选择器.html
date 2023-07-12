@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS 选择器</title>
+	<style>
+		/* 标签选择器 */
+		p {
+			color: blue;
+			font-weight: bold;
+		}
+		
+		/* 类选择器 */
+		.my-class {
+			background-color: yellow;
+		}
+		
+		/* ID 选择器 唯一 */
+		#my-id {
+			background:pink;
+			font-size: 24px;
+		}
+
+		/* 属性 选择器 */
+		  /* 选择所有带有title属性的元素 */
+		  [title] {
+			color: blue;
+		}
+		
+		/* 选择title属性值为"example"的元素 */
+		[title="example"] {
+			font-weight: bold;
+			color:red;
+		}
+
+		/* 伪类选择器 */
+		  /* 选择未被访问过的链接 */
+		  a:link {
+			color: blue;
+		}
+		
+		/* 选择被访问过的链接 */
+		a:visited {
+			color: purple;
+		}
+		
+		/* 选择鼠标悬停在元素上的状态 */
+		button:hover {
+			background-color: yellow;
+			cursor: pointer;
+		}
+
+		/* 后代选择器 */
+		div p {
+			text-decoration: underline;
+		}
+		
+		/* 子元素选择器 */
+		ul > li {
+			font-style: italic;
+		}
+		
+		/* 相邻兄弟选择器 */
+		h2 + p {
+			color: green;
+		}
+		/* 并集选择器，多组标签，同样的样式 */
+		/* 选择所有h1和h2元素并设置相同的颜色 */
+		h1, h2 {
+			color:royalblue ;
+		}
+		/* 通用选择器 */
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		/* 嵌套选择器 */
+		 /* 选择article元素下的所有p元素 */
+		 article p {
+			font-style: italic;
+		}
+		
+		/* 选择article元素中的直接子元素h2 */
+		article > h2 {
+			color: blue;
+ 		 }
+
+		/*组合多个选择器来定位指定的元素*/
+		.container .my-class > ul li:first-child {
+  			background-color: gray;
+		}
+
+	</style>
+</head>
+<body >
+	<div class="container">	
+		<!--  -->
+		<p>样式通过标签选择器添加，所有的p元素都有</p>
+		<p>这是另一个段落。</p>
+		<div id="my-id">
+			<p>这是一个 div 中的段落。</p>
+		</div>
+		<div class="my-class">
+			<ul>
+				<li>列表项 1</li>
+				<li>列表项 2</li>
+				<li>列表项 3</li>
+			</ul>
+		</div>
+		<div title="example">有一个属性为title，值为example</div>
+		<div title="other">有一个属性为title，值为other</div>
+
+		<a href="#">通过伪类选择器添加样式</a>
+		<button>通过伪类选择器添加样式</button>
+
+		<!-- 并集选择器 -->
+		<h1>标题 1</h1>
+		<h2>标题 2</h2>
+		<h3>标题 3</h3>
+
+		<!-- 嵌套选择器 -->
+		<article>
+			<h2>Title</h2>
+			<p>Paragraph 1</p>
+			<section>
+				<p>Paragraph 2</p>
+			</section>
+		</article>
+	</div>
+
+	<h2>标题</h2>
+	<p>相邻兄弟选择器</p>
+	<p>通用选择器</p>
+</body>
+</html>

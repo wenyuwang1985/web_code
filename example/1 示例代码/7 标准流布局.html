@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>标准流布局</title>
+  <style>
+    .container {
+      width: 1280px;
+      margin: 0 auto;
+    }
+
+    .header {
+      background-color: lightblue;
+      padding: 20px;
+    }
+
+    .sidebar {
+      background-color: lightgray;
+      width: 200px;
+      float: left;
+      margin-right: 20px;
+      height: 640px;
+    }
+
+    .content {
+      background-color: lightgreen;
+      padding: 20px;
+      height: 600px;
+    }
+
+    .content .float-parent{
+      height:220px;
+      overflow: hidden;
+      background:blue;
+    }
+    .content .float-child{
+      float: left;
+      width:120px;
+      height:60px;
+      background:greenyellow;
+      margin:20px 26px;
+    }
+    .footer {
+      background-color: lightyellow;
+      padding: 20px;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      Header-导航/banner
+    </div>
+    <div class="sidebar">
+      Sidebar-菜单<br><strong>-使用float:left,脱离文档流</strong><br>
+    </div>
+    <div class="content">
+      Content-内容12334454555656<br>
+      <strong>1.当一个元素浮动时，它会脱离标准流，并且周围的内容会重新排列以适应该浮动元素的位置。</strong><br>
+      <strong>2.浮动的元素会一行内显示并且元素顶部对齐，没有间距</strong>
+      <div class="float-parent">
+        <div class="float-child">浮动子盒子</div>
+        <div class="float-child">浮动子盒子</div>
+        <div class="float-child">浮动子盒子</div>
+        <div class="float-child">浮动子盒子</div>
+        <div class="float-child">浮动子盒子</div>
+        <div class="float-child">浮动子盒子</div>
+        <div class="float-child">浮动子盒子</div>
+        <div class="float-child">浮动子盒子</div>
+      </div>
+    </div>
+    <div class="footer">
+      Footer-版本声明
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

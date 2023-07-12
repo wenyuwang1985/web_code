@@ -1,0 +1,133 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CSS入门</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		header {
+			background-color: #333;
+			padding: 10px;
+			
+		}
+		nav ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			text-align: center;
+		}
+		nav ul li {
+			display: inline-block;
+			margin-right: 10px;
+		}
+		nav ul li a {
+			color: #fff;
+			text-decoration: none;
+		}
+		nav ul li a:hover {
+			text-decoration: underline;
+		}
+		footer {
+			width:100%;
+			/* position: fixed;
+			left: 0;
+			bottom: 0; */
+			background-color: #333;
+			padding: 10px;
+			color: #fff;
+			text-align: center;
+			
+		}
+		.container {
+			max-width: 960px;
+			margin: 0 auto;
+			padding: 20px;
+			padding-bottom:50px;
+		}
+		.row {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 -15px;
+		}
+		.col {
+			flex: 1;
+			padding: 0 15px;
+		}
+		.col-2 {
+			flex-basis: 50%;
+		}
+		.col-3 {
+			flex-basis: 33.33%;
+		}
+		.col-4 {
+			flex-basis: 25%;
+		}
+		.btn {
+			display: inline-block;
+			padding: 10px 20px;
+			background-color: #007bff;
+			color: #fff;
+			border-radius: 5px;
+			text-align: center;
+			text-decoration: none;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+		.btn:hover {
+			background-color: #0062cc;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="#">首页</a></li>
+				<li><a href="#">关于我们</a></li>
+				<li><a href="#">联系我们</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<div class="container">
+			<h1>CSS入门</h1>
+			<p>这是一段零基础CSS入门的HTML代码，包含前端通用HTML模板，有常见的标签和属性，有CSS常用样式属性。</p>
+			<div class="row">
+				<div class="col col-3">
+					<img src="https://via.placeholder.com/300x200" alt="Placeholder Image">
+					<h2>标题1</h2>
+					<p>这是一段描述文字。</p>
+					<a href="#" class="btn">按钮</a>
+				</div>
+				<div class="col col-3">
+					<img src="https://via.placeholder.com/300x200" alt="Placeholder Image">
+					<h2>标题2</h2>
+					<p>这是一段描述文字。</p>
+					<a href="#" class="btn">按钮</a>
+				</div>
+				<div class="col col-3">
+					<img src="https://via.placeholder.com/300x200" alt="Placeholder Image">
+					<h2>标题3</h2>
+					<p>这是一段描述文字。</p>
+					<a href="#" class="btn">按钮</a>
+				</div>
+				<div class="col col-3">
+					<img src="https://via.placeholder.com/300x200" alt="Placeholder Image">
+					<h2>标题4</h2>
+					<p>这是一段描述文字。</p>
+					<a href="#" class="btn">按钮</a>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<p>版权所有 © 2023</p>
+	</footer>
+</body>
+</html>

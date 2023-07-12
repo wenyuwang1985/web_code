@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>css常用样式属性</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+    }
+    
+  /* 1 文本属性 */
+    .txt-color{
+      color: red;
+    }
+    .txt-size{
+      font-size: 18px;
+    }
+    .txt-family{
+      font-family: "微软雅黑";
+    }
+    .txt-weight{
+      font-weight: bold;
+    }
+    .txt-style{
+      font-style: italic;
+    }
+    .txt-align{
+      text-align: center;
+      width:400px;
+      border:1px solid red;
+    }
+    .txt-line-height{
+      width:600px;
+      height:60px;
+      line-height: 60px;
+      border:1px solid green;
+    }
+
+  /* 2 盒模型属性 */
+  .con-width{
+        width:300px;
+        background:pink;
+    }
+    .con-height{
+      height: 50px;
+      width:300px; /*宽度如果不设置，默认是百分之百的宽度*/
+      background: yellowgreen;
+    }
+    .con-box{
+      background:rgb(158, 177, 235);
+      width:50%;
+      border:1px solid #000;
+    }
+    .con-padding{
+      padding: 20px;
+      width:380px;
+      border:1px solid red;
+    }
+    .con-margin{
+      width:600px;
+      border:1px solid red;
+      margin:20px;
+    }
+    .con-auto-center{
+      width:170px;
+      margin:0 auto;
+      border:1px solid red;
+      background:pink;
+    }
+
+    .con-center{
+      text-align: center;
+    }
+
+    .one{
+      width:100px;
+      height:100px;
+      background:red;
+      margin-bottom:50px;
+    }
+    .two{
+      width:100px;
+      height:100px;
+      background:orange;
+      margin-top:20px;
+    }
+
+    .con-parent{
+      width:160px;
+      height:160px;
+      background:pink;
+      margin-top:20px;
+    }
+    .con-child{
+      width:80px;
+      height: 80px;
+      background:orange;
+      margin-top:50px;
+    }
+    /* 2.1 边框属性 */
+    .border-style{
+      border-style: solid;
+    }
+    .border-width{
+      border-style:dotted;
+      border-width: 3px;
+    }
+    .border-color{
+      border-style: dashed;
+      border-color:blue;
+    }
+    .border-simplify{
+      border:4px solid red 
+    }
+
+    /* 3 背景属性 */
+    .bg-color{
+          /* background-color: gray; */
+          background:rgba(246, 10, 10, 0.2);
+    }
+    .bg-img{
+      background-image: url("./img/logo.png");
+      background-repeat: no-repeat;  /*设置背景为不重复的*/
+      display: inline-block;
+    }
+    
+
+    
+
+    </style>
+  
+</head>
+<body>
+
+<div>
+  <pre>
+    <h1>1 文本属性 </h1>
+    color: red;<span class="txt-color">/* 设置文本颜色为红色 */</span>
+    
+    
+    font-size: 18px;<span class="txt-size">/* 设置文本大小为 18px */</span>
+
+    font-family: "微软雅黑";<span class="txt-family">/* 设置文本字体为微软雅黑 */</span>
+    
+    font-weight: bold;<span class="txt-weight">/* 设置文本字体为加粗 */</span>
+    
+    font-style: italic;<span class="txt-style">/* 设置文本字体为斜体 */</span>
+    text-align: center;
+    <div class="txt-align">/* 设置文本居中对齐 */</div>
+
+    line-height:60px;
+    <div class="txt-line-height">/* 设置文本行高为60px，即高度为60px的容器垂直居中 */</div>
+
+
+    <h1>2 盒模型属性</h1>
+    
+    width: 300px;<div class="con-width"> /* 设置元素宽度为 300px */</div>
+    
+    height: 50px;<div class="con-height">/* 设置元素高度为 50px */</div>
+    
+    padding: 20px;
+    <div class="con-box">
+      <div class="con-padding">/* 设置元素内边距为 20px,内边距会加到元素本身的宽高上 */</div>
+    </div>
+    
+    margin: 20px;
+    <div class="con-box">
+      <div class="con-margin">/* 设置元素外边距为 20px,元素和其他参照物的间距，外边距不会增加元素本身的宽高上， */</div>
+    </div>
+
+    块级元素，水平居中:width:170px; margin:0 auto;
+    <div class="con-box">
+      <div class="con-auto-center">/* 块级元素，水平居中 */</div>
+    </div>
+
+    行内元素或行内块元素水平居中：text-align:center;
+    <div class="con-box" style="text-align:center;">
+        <span>/* 行内元素 */</span>
+        <img src="https://via.placeholder.com/150" alt="示例图片" style="display: inline-block;">
+        <input type="text" value="示例输入框" style="display: inline-block;">
+        <button style="display: inline-block;">示例按钮</button>
+    </div>
+
+    外边距合并：1.相邻块元素垂直外边距合并
+    上面元素有下边距，下面元素有上边距、垂直间距不是上下边距之和，是两个值取较大的
+    <div class="con-box">
+      <div class="one">one</div><!--
+      --><div class="two">two</div>
+    </div>
+
+    嵌套块元素垂直外边距塌陷
+    嵌套关系的块元素，父元素有上边距，同时子元素也有上边距，父元素会塌陷较大的外边距值，外边距取较大值合并形成一个外边距
+    <div class="con-parent"><div class="con-child">子级div</div></div>
+    
+
+    <h2>2.1 边框属性 </h2>
+    
+    border-style: solid;<span class="border-style">/* 设置边框样式为实线,默认为黑色 */</span>
+    
+    border-width: 3px;<span class="border-width">/* 设置边框宽度为 3px */</span>
+    
+    border-color: blue;<span class="border-color">/* 设置边框颜色为蓝色 */</span>
+
+    <strong class="border-simplify">4px的实线红色边框，简化为：border:4px solid red ;</strong>
+
+
+    
+    <h1>3 背景属性</h1>
+    
+    background:rgba(246, 10, 10, 0.2);<span class="bg-color">/* 设置背景颜色为红色，背景透明度为0.2 */</span>
+    
+    
+    background-image: url("bg.jpg");
+    <span class="bg-img">/* 设置背景图片 */
+    background-image: url("bg.jpg"); 默认背景重复排列
+    background-repeat: no-repeat; 图片不重复
+    简化为：
+    background:url("bg.jgp") no-repeat;
+    </span>
+
+    <strong>简化为：background:url("bg.jgp") no-repeat;</strong>
+
+    <h2>3.1 设置背景图片的水平和垂直位置、设置背景图片的尺寸为覆盖整个元素 </h2>
+    <style>
+      /* 设置 .container 元素的背景图片 */
+    .container {
+      background-image: url("https://via.placeholder.com/500x500");
+      /* 设置背景图片的重复方式为不重复 */
+      background-repeat: no-repeat;
+      /* 设置背景图片的水平和垂直位置 */
+      background-position: center center;
+      /* 设置背景图片的尺寸为覆盖整个元素 */
+      background-size: cover;
+      /* 设置 .container 元素的宽度和高度 */
+      width: 500px;
+      height: 500px;
+    }
+    </style>
+    <div class="container">
+      <h1>Hello, World!</h1>
+      <p>这是一个背景样式的demo，这个背景样式覆盖整个内容！文字在长点试试。。。，哎呀超出背景去了</p>
+      <div>
+        /* 设置背景图片的水平和垂直位置 */
+        background-position: center center;
+        /* 设置背景图片的尺寸为覆盖整个元素 */
+        background-size: cover;
+      </div>
+    </div>
+
+
+    
+    <h1>4 定位属性</h1>
+    <h2>4.1 绝对定位</h2>
+    /* 设置元素父元素相对定位属性 */
+    position: relative;
+
+    /* 设置元素子元素绝对定位属性 */
+    position: absolute;
+    
+    /* 设置元素距离左边缘 50px */
+    left: 50px;
+    
+    /* 设置元素距离上边缘 20px */
+    top: 20px;
+    
+    /* 设置元素的层叠顺序为 1 */
+    z-index: 1;
+    <strong>/* 设置元素相对于父元素垂直居中定位 */</strong>
+    <style>
+      /* 相对定位 */
+      .parent {
+        position: relative;
+        width: 400px;
+        height: 200px;
+        background-color: #f2f2f2;
+      }
+       /*  绝对定位 */
+      .child {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+      }
+    </style>
+    <div class="parent">
+      <div class="child">绝对/相对定位搭配使用</div>
+    </div>
+    <h2>4.2 固定定位</h2>
+
+    <style>
+      .fixed-box {
+        position: fixed;
+        bottom: 10px;
+        left: 20px;
+        width: 300px;
+        height: 100px;
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        cursor: pointer;
+      }
+    </style>
+    
+      <div class="fixed-box"  onclick="scrollToTop()">
+        这是一个固定定位的盒子
+        点击回到顶部,刷新页面回到原来的位置
+      </div>
+    
+      <script>
+         function scrollToTop() {
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+
+            // 存储滚动位置到 localStorage
+            localStorage.setItem('scrollPosition', window.pageYOffset);
+          }
+
+          window.onload = function() {
+            // 恢复滚动位置
+            const scrollPosition = localStorage.getItem('scrollPosition');
+            if (scrollPosition) {
+              window.scrollTo({
+                top: scrollPosition,
+                behavior: 'smooth'
+              });
+              // 清除存储的滚动位置
+              localStorage.removeItem('scrollPosition');
+            }
+          };
+      </script>
+     
+    
+
+  </pre>
+ 
+
+</div>
+
+</body>
+</html>
